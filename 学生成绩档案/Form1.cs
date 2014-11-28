@@ -15,20 +15,52 @@ namespace 学生成绩档案
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "server=.;database=学生成绩档案;uid=sa;pwd=2001";
             con.Open();
             if (con.State == ConnectionState.Open)
             {
-                string sql = "select 学号 as 学号, 姓名 as 姓名 form 成绩";
+                string sql = "select 学号 as 学号, 姓名 as 姓名, 语文 as 语文, 数学 as 数学 , 英语 as 英语 from 成绩";
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            }
+        }
+
+        private void button_add_Click(object sender, EventArgs e)
+        {
+            string a = textBox1.Text.ToString();
+            string b = textBox2.Text.ToString();
+            string c = textBox3.Text.ToString();
+            string d = textBox4.Text.ToString();
+            string f = textBox5.Text.ToString();
+            SqlConnection con = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            con.ConnectionString = "server=.;database=学生成绩档案;uid=sa;pwd=2001";
+            con.Open();
+            if (con.State == ConnectionState.Open)
+            {
+                cmd.Connection = con;
+                cmd.CommandText = @"insert into 
+                成绩 values('" + a + "','" + b + "','" + c + "','" + d + "','" + f + "')";
+                int i = cmd.ExecuteNonQuery();
+                if (i == 0)
+                {
+                    MessageBox.Show("添加失败");
+                }
+                else
+                {
+                    string sql = "select 学号 as 学号, 姓名 as 姓名, 语文 as 语文, 数学 as 数学 , 英语 as 英语 from 成绩";
+                    SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
+                }
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
             }
         }
     }
