@@ -41,6 +41,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_add = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button_inquiry = new System.Windows.Forms.Button();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button_search = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,7 +54,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button_inquiry = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,7 +74,7 @@
             this.groupBox1.Controls.Add(this.button_add);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(172, 258);
+            this.groupBox1.Size = new System.Drawing.Size(172, 231);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "新增";
@@ -156,7 +161,7 @@
             // 
             // button_add
             // 
-            this.button_add.Location = new System.Drawing.Point(91, 229);
+            this.button_add.Location = new System.Drawing.Point(92, 193);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(75, 23);
             this.button_add.TabIndex = 0;
@@ -167,23 +172,88 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button_inquiry);
+            this.groupBox2.Controls.Add(this.checkBox4);
+            this.groupBox2.Controls.Add(this.checkBox3);
+            this.groupBox2.Controls.Add(this.checkBox2);
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.button_search);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Location = new System.Drawing.Point(12, 276);
+            this.groupBox2.Location = new System.Drawing.Point(12, 249);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(172, 283);
+            this.groupBox2.Size = new System.Drawing.Size(172, 248);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "查询";
             // 
+            // button_inquiry
+            // 
+            this.button_inquiry.Location = new System.Drawing.Point(91, 213);
+            this.button_inquiry.Name = "button_inquiry";
+            this.button_inquiry.Size = new System.Drawing.Size(75, 23);
+            this.button_inquiry.TabIndex = 11;
+            this.button_inquiry.Text = "查询";
+            this.button_inquiry.UseVisualStyleBackColor = true;
+            this.button_inquiry.Click += new System.EventHandler(this.button_inquiry_Click);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(88, 137);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(48, 16);
+            this.checkBox4.TabIndex = 10;
+            this.checkBox4.Text = "总和";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(8, 138);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(48, 16);
+            this.checkBox3.TabIndex = 9;
+            this.checkBox3.Text = "英语";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(88, 115);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(48, 16);
+            this.checkBox2.TabIndex = 8;
+            this.checkBox2.Text = "数学";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(9, 115);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(48, 16);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "语文";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button_search
+            // 
+            this.button_search.Location = new System.Drawing.Point(91, 69);
+            this.button_search.Name = "button_search";
+            this.button_search.Size = new System.Drawing.Size(75, 23);
+            this.button_search.TabIndex = 6;
+            this.button_search.Text = "搜索";
+            this.button_search.UseVisualStyleBackColor = true;
+            this.button_search.Click += new System.EventHandler(this.button_search_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(108, 74);
+            this.label8.Location = new System.Drawing.Point(109, 173);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(17, 12);
             this.label8.TabIndex = 5;
@@ -192,7 +262,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 74);
+            this.label7.Location = new System.Drawing.Point(7, 173);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 12);
             this.label7.TabIndex = 4;
@@ -209,14 +279,14 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(131, 71);
+            this.textBox8.Location = new System.Drawing.Point(132, 170);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(35, 21);
             this.textBox8.TabIndex = 2;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(67, 71);
+            this.textBox7.Location = new System.Drawing.Point(68, 170);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(35, 21);
             this.textBox7.TabIndex = 1;
@@ -230,28 +300,20 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(196, 20);
+            this.dataGridView1.Location = new System.Drawing.Point(208, 20);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(405, 539);
+            this.dataGridView1.Size = new System.Drawing.Size(406, 477);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // button_inquiry
-            // 
-            this.button_inquiry.Location = new System.Drawing.Point(90, 98);
-            this.button_inquiry.Name = "button_inquiry";
-            this.button_inquiry.Size = new System.Drawing.Size(75, 23);
-            this.button_inquiry.TabIndex = 6;
-            this.button_inquiry.Text = "查询";
-            this.button_inquiry.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 571);
+            this.ClientSize = new System.Drawing.Size(626, 512);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -288,7 +350,12 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button_search;
         private System.Windows.Forms.Button button_inquiry;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
