@@ -20,7 +20,7 @@ namespace 学生成绩档案
             con.Open();
             if (con.State == ConnectionState.Open)
             {
-                string sql = "select 学号 as 学号, 姓名 as 姓名, 语文 as 语文, 数学 as 数学 , 英语 as 英语 from 成绩";
+                string sql = "select 学号, 姓名 from 学生信息 left join 成绩 on 学生信息.学生ID=成绩.学生ID";
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
