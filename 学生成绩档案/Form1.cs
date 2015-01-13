@@ -16,11 +16,11 @@ namespace 学生成绩档案
         {
             InitializeComponent();
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "server=.;database=学生成绩档案;uid=sa;pwd=2001";
+            con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
             con.Open();
             if (con.State == ConnectionState.Open)
             {
-                string sql = "select 学生ID, 课程号, 分数 from 成绩";
+                string sql = "SELECT  学生.学号 as 学号, 学生.姓名 as 姓名,  学生.班级 as 班级 from 学生";
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
@@ -37,7 +37,7 @@ namespace 学生成绩档案
             string f = textBox5.Text.ToString();
             SqlConnection con = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
-            con.ConnectionString = "server=.;database=学生成绩档案;uid=sa;pwd=2001";
+            con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
             con.Open();
             if (con.State == ConnectionState.Open)
             {
@@ -73,7 +73,7 @@ namespace 学生成绩档案
         {
             string name = this.textBox6.Text.ToString();
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "server=.;database=学生成绩档案;uid=sa;pwd=2001";
+            con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
             con.Open();
             if (con.State == ConnectionState.Open)
             {
@@ -90,7 +90,7 @@ namespace 学生成绩档案
             int a = Int32.Parse(this.textBox7.Text);
             int b = Int32.Parse(this.textBox8.Text);
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "server=.;database=学生成绩档案;uid=sa;pwd=2001";
+            con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
             con.Open();
             if (con.State == ConnectionState.Open)
             {
