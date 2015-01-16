@@ -20,12 +20,12 @@ namespace 学生成绩档案
             con.Open();
             if (con.State == ConnectionState.Open)
             {
-                string sql = "SELECT  成绩.学号, 学生.姓名, 学生.班级, 课程.课程名称, 成绩.回数, 成绩.成绩 "
+                string sql = "SELECT  成绩.学号, 学生.姓名, 学生.班级, 课程.课程名称 as 科目, 成绩.回数, 成绩.成绩 "
                     +"FROM 成绩 "
                     +"JOIN 学生 "
-                    + "ON 成绩.学号 = 学生.学号"
-                    + "JOIN 课程 "
-                    + "ON 成绩.课程编号 = 课程.课程编号";
+                    +"ON 成绩.学号 = 学生.学号 "
+                    +"JOIN 课程 "
+                    +"ON 成绩.课程编号 = 课程.课程编号";
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
@@ -33,8 +33,8 @@ namespace 学生成绩档案
             }
         }
 
-        private void button_add_Click(object sender, EventArgs e)
-        {
+        private void button_按班级查询_Click(object sender, EventArgs e)
+        {/*
             string a = textBox1.Text.ToString();
             string b = textBox2.Text.ToString();
             string c = textBox3.Text.ToString();
@@ -71,11 +71,11 @@ namespace 学生成绩档案
                 {
                     con.Close();
                 }
-            }
+            }*/
         }
 
-        private void button_search_Click(object sender, EventArgs e)
-        {
+        private void button_按个人查询_Click(object sender, EventArgs e)
+        {/*
             string name = this.textBox6.Text.ToString();
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
@@ -87,11 +87,11 @@ namespace 学生成绩档案
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
-            }
+            }*/
         }
 
-        private void button_inquiry_Click(object sender, EventArgs e)
-        {
+        private void button_按分数查询_Click(object sender, EventArgs e)
+        {/*
             int a = Int32.Parse(this.textBox7.Text);
             int b = Int32.Parse(this.textBox8.Text);
             SqlConnection con = new SqlConnection();
@@ -104,7 +104,7 @@ namespace 学生成绩档案
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
-            }
+            }*/
         }
     }
 }
