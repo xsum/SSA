@@ -56,6 +56,8 @@ namespace 学生成绩档案
         {
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
+
+/*          con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
             string sql = "SELECT  成绩.学号, 学生.姓名, 学生.班级, 课程.课程名称 as 科目, 成绩.回数, 成绩.成绩 "
                     + "FROM 成绩 "
                     + "JOIN 学生 "
@@ -63,7 +65,12 @@ namespace 学生成绩档案
                     + "JOIN 课程 "
                     + "ON 成绩.课程编号 = 课程.课程编号 "
                     + "WHERE 成绩.学号 = '" + textBoxGerenXuehao.Text + "' "
-                    + "AND 成绩.回数 =  '" + textBoxGerenHuishu.Text + "'";
+                    + "AND 成绩.回数 =  '" + textBoxGerenHuishu.Text + "'";*/
+            string sql = "SELECT  成绩.回数, 成绩.成绩 as 语文, "
+                    + "FROM 成绩 "
+                    + "WHERE 成绩.学号 = '" + textBoxGerenXuehao.Text + "' "
+                    + "AND 成绩.回数 =  '" + textBoxGerenHuishu.Text + "' "
+                    + "JOIN 成绩 ";
             SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
             DataSet ds = new DataSet();
             adapter.Fill(ds);
@@ -72,44 +79,66 @@ namespace 学生成绩档案
 
         private void buttonFenshu_Click(object sender, EventArgs e)
         {
-
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
+            string sql = "SELECT  成绩.学号, 学生.姓名, 学生.班级, 课程.课程名称 as 科目, 成绩.回数, 成绩.成绩 "
+                    + "FROM 成绩 "
+                    + "JOIN 学生 "
+                    + "ON 成绩.学号 = 学生.学号 "
+                    + "JOIN 课程 "
+                    + "ON 成绩.课程编号 = 课程.课程编号 "
+                    + "WHERE 成绩.成绩 >='" + textBoxFenshuFanwei1.Text + "' "
+                    + "AND 成绩.成绩 <='" + textBoxFenshuFanwei2.Text + "'";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
         }
 
         private void buttonChengjiXinzeng_Click(object sender, EventArgs e)
         {
-            /*
-            SqlConnection con = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
-            con.Open();
-            if (con.State == ConnectionState.Open)
+            string a = comboBoxChengjiKemu.Text;
+            if(a == "语文")
             {
-                cmd.Connection = con;
-                cmd.CommandText = @"insert into 
-                成绩 values('" + a + "','" + b + "','" + c + "','" + d + "','" + f + "')";
-                int i = cmd.ExecuteNonQuery();
-                if (i == 0)
-                {
-                    MessageBox.Show("添加失败");
-                }
-                else
-                {
-                    string sql = "select 学号, 姓名 from 成绩";
-                    SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds);
-                    this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
-                    this.textBox1.Clear();
-                    this.textBox2.Clear();
-                    this.textBox3.Clear();
-                    this.textBox4.Clear();
-                    this.textBox5.Clear();
-                }
-                if (con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
-            }*/
+                a = "101";
+            }
+            if (a == "数学")
+            {
+                a = "102";
+            }
+            if (a == "英语")
+            {
+                a = "103";
+            }
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
+            string sql = "INSERT 成绩 "
+                    + "VALUES ('" + textBoxChengjiXuehao.Text + "', "
+                    + "'" + a + "', "
+                    + "'" + textBoxChengjiHuishu.Text + "', "
+                    + "'" + textBoxChengjiChengji.Text + "')";
+            SqlCommand cmd = new SqlCommand(sql, con);
+            con.Open();
+            int i = cmd.ExecuteNonQuery();
+            if (i == 0)
+            {
+                MessageBox.Show("添加失败");
+            }
+            else
+            {
+                string sql2 = "SELECT 成绩.学号, 学生.姓名, 学生.班级, 课程.课程名称 as 科目, 成绩.回数, 成绩.成绩 "
+                    + "FROM 成绩 "
+                    + "JOIN 学生 "
+                    + "ON 成绩.学号 = 学生.学号 "
+                    + "JOIN 课程 "
+                    + "ON 成绩.课程编号 = 课程.课程编号 "
+                    + "WHERE 成绩.学号 = '" + textBoxChengjiXuehao.Text + "'";
+                SqlDataAdapter adapter = new SqlDataAdapter(sql2, con);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
+                this.textBoxChengjiChengji.Clear();
+            }
         }
 
         private void buttonChengjiXiugai_Click(object sender, EventArgs e)
