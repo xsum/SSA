@@ -56,21 +56,12 @@ namespace 学生成绩档案
         {
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
-
-/*          con.ConnectionString = "Server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
-            string sql = "SELECT  成绩.学号, 学生.姓名, 学生.班级, 课程.课程名称 as 科目, 成绩.回数, 成绩.成绩 "
-                    + "FROM 成绩 "
-                    + "JOIN 学生 "
-                    + "ON 成绩.学号 = 学生.学号 "
-                    + "JOIN 课程 "
-                    + "ON 成绩.课程编号 = 课程.课程编号 "
-                    + "WHERE 成绩.学号 = '" + textBoxGerenXuehao.Text + "' "
-                    + "AND 成绩.回数 =  '" + textBoxGerenHuishu.Text + "'";*/
-            string sql = "SELECT  成绩.回数, 成绩.成绩 as 语文, "
-                    + "FROM 成绩 "
-                    + "WHERE 成绩.学号 = '" + textBoxGerenXuehao.Text + "' "
-                    + "AND 成绩.回数 =  '" + textBoxGerenHuishu.Text + "' "
-                    + "JOIN 成绩 ";
+            string sql = "SELECT DISTINCT 回数, "
+                    + "(SELECT 成绩 FROM 成绩 AS t1 WHERE 课程编号='101' AND t1.学号=t2.学号) AS 语文, "
+                    + "(SELECT 成绩 FROM 成绩 AS t1 WHERE 课程编号='102' AND t1.学号=t2.学号) AS 数学, "
+                    + "(SELECT 成绩 FROM 成绩 AS t1 WHERE 课程编号='103' AND t1.学号=t2.学号) AS 英语 "
+                    + "FROM 成绩 AS t2 "
+                    + "WHERE 学号 = '" + textBoxGerenXuehao.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
             DataSet ds = new DataSet();
             adapter.Fill(ds);
