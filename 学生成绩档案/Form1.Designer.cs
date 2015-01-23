@@ -37,8 +37,8 @@
             this.textBoxBanjiBanji = new System.Windows.Forms.TextBox();
             this.buttonBanji = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxGerenXingming = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxGerenHuishu = new System.Windows.Forms.TextBox();
             this.buttonGeren = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxGerenXuehao = new System.Windows.Forms.TextBox();
@@ -172,8 +172,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBoxGerenXingming);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBoxGerenHuishu);
             this.groupBox2.Controls.Add(this.buttonGeren);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.textBoxGerenXuehao);
@@ -184,6 +184,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "按个人";
             // 
+            // textBoxGerenXingming
+            // 
+            this.textBoxGerenXingming.Location = new System.Drawing.Point(65, 55);
+            this.textBoxGerenXingming.Name = "textBoxGerenXingming";
+            this.textBoxGerenXingming.Size = new System.Drawing.Size(100, 21);
+            this.textBoxGerenXingming.TabIndex = 9;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -191,14 +198,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 8;
-            this.label5.Text = "回数";
-            // 
-            // textBoxGerenHuishu
-            // 
-            this.textBoxGerenHuishu.Location = new System.Drawing.Point(65, 55);
-            this.textBoxGerenHuishu.Name = "textBoxGerenHuishu";
-            this.textBoxGerenHuishu.Size = new System.Drawing.Size(100, 21);
-            this.textBoxGerenHuishu.TabIndex = 7;
+            this.label5.Text = "姓名";
             // 
             // buttonGeren
             // 
@@ -681,12 +681,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxGerenHuishu;
         private System.Windows.Forms.TextBox textBoxFenshuHushu;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBoxChengjiHuishu;
         private System.Windows.Forms.TextBox textBoxXinxiBanji;
+        private System.Windows.Forms.TextBox textBoxGerenXingming;
     }
 }
 
