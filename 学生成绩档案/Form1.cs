@@ -66,6 +66,11 @@ namespace 学生成绩档案
             DataSet ds = new DataSet();
             adapter.Fill(ds);
             this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            string sql2 = "SELECT 班级, 姓名 FROM 学生 WHERE 学号='" + textBoxGerenXuehao.Text + "'";
+            SqlDataAdapter adapter2 = new SqlDataAdapter(sql2, con);
+            DataSet ds2 = new DataSet();
+            adapter2.Fill(ds2);
+            this.textBoxGerenXinxi.Text = ds2.Tables[0].Rows[0][0].ToString() + "班 " + ds2.Tables[0].Rows[0][1].ToString();
         }
 
         private void buttonFenshu_Click(object sender, EventArgs e)

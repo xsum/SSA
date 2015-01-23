@@ -37,7 +37,6 @@
             this.textBoxBanjiBanji = new System.Windows.Forms.TextBox();
             this.buttonBanji = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBoxGerenXingming = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonGeren = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -80,6 +79,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBoxGerenXinxi = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -172,7 +172,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBoxGerenXingming);
+            this.groupBox2.Controls.Add(this.textBoxGerenXinxi);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.buttonGeren);
             this.groupBox2.Controls.Add(this.label6);
@@ -184,13 +184,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "按个人";
             // 
-            // textBoxGerenXingming
-            // 
-            this.textBoxGerenXingming.Location = new System.Drawing.Point(65, 55);
-            this.textBoxGerenXingming.Name = "textBoxGerenXingming";
-            this.textBoxGerenXingming.Size = new System.Drawing.Size(100, 21);
-            this.textBoxGerenXingming.TabIndex = 9;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -198,7 +191,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 8;
-            this.label5.Text = "姓名";
+            this.label5.Text = "信息";
             // 
             // buttonGeren
             // 
@@ -605,6 +598,14 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "学号";
             // 
+            // textBoxGerenXinxi
+            // 
+            this.textBoxGerenXinxi.Enabled = false;
+            this.textBoxGerenXinxi.Location = new System.Drawing.Point(65, 55);
+            this.textBoxGerenXinxi.Name = "textBoxGerenXinxi";
+            this.textBoxGerenXinxi.Size = new System.Drawing.Size(100, 21);
+            this.textBoxGerenXinxi.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -686,7 +687,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBoxChengjiHuishu;
         private System.Windows.Forms.TextBox textBoxXinxiBanji;
-        private System.Windows.Forms.TextBox textBoxGerenXingming;
+        private System.Windows.Forms.TextBox textBoxGerenXinxi;
     }
 }
 
