@@ -1,6 +1,6 @@
 ﻿namespace 学生成绩档案
 {
-    partial class Form1
+    partial class FormJiaoshi
     {
         /// <summary>
         /// 必需的设计器变量。

@@ -46,16 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormDenglu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDenglu.Designer.cs">
+      <DependentUpon>FormDenglu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormJiaoshi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJiaoshi.Designer.cs">
+      <DependentUpon>FormJiaoshi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXuesheng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXuesheng.Designer.cs">
+      <DependentUpon>FormXuesheng.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormDenglu.resx">
+      <DependentUpon>FormDenglu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJiaoshi.resx">
+      <DependentUpon>FormJiaoshi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXuesheng.resx">
+      <DependentUpon>FormXuesheng.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
