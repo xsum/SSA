@@ -50,6 +50,7 @@
             // 
             this.textBoxMima.Location = new System.Drawing.Point(107, 79);
             this.textBoxMima.Name = "textBoxMima";
+            this.textBoxMima.PasswordChar = '*';
             this.textBoxMima.Size = new System.Drawing.Size(123, 21);
             this.textBoxMima.TabIndex = 1;
             // 

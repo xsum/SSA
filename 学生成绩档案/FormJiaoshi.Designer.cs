@@ -37,12 +37,12 @@
             this.textBoxBanjiBanji = new System.Windows.Forms.TextBox();
             this.buttonBanji = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxGerenXinxi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonGeren = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxGerenXuehao = new System.Windows.Forms.TextBox();
             this.buttonFenshu = new System.Windows.Forms.Button();
-            this.checkBoxPingjun = new System.Windows.Forms.CheckBox();
             this.checkBoxYingyue = new System.Windows.Forms.CheckBox();
             this.checkBoxShuxue = new System.Windows.Forms.CheckBox();
             this.checkBoxYuwen = new System.Windows.Forms.CheckBox();
@@ -79,7 +79,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBoxGerenXinxi = new System.Windows.Forms.TextBox();
+            this.buttonZhuxiao = new System.Windows.Forms.Button();
+            this.buttonTuichu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -184,6 +185,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "按个人";
             // 
+            // textBoxGerenXinxi
+            // 
+            this.textBoxGerenXinxi.Enabled = false;
+            this.textBoxGerenXinxi.Location = new System.Drawing.Point(65, 55);
+            this.textBoxGerenXinxi.Name = "textBoxGerenXinxi";
+            this.textBoxGerenXinxi.Size = new System.Drawing.Size(100, 21);
+            this.textBoxGerenXinxi.TabIndex = 9;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -221,7 +230,7 @@
             // 
             // buttonFenshu
             // 
-            this.buttonFenshu.Location = new System.Drawing.Point(92, 136);
+            this.buttonFenshu.Location = new System.Drawing.Point(92, 111);
             this.buttonFenshu.Name = "buttonFenshu";
             this.buttonFenshu.Size = new System.Drawing.Size(75, 23);
             this.buttonFenshu.TabIndex = 11;
@@ -229,20 +238,10 @@
             this.buttonFenshu.UseVisualStyleBackColor = true;
             this.buttonFenshu.Click += new System.EventHandler(this.buttonFenshu_Click);
             // 
-            // checkBoxPingjun
-            // 
-            this.checkBoxPingjun.AutoSize = true;
-            this.checkBoxPingjun.Location = new System.Drawing.Point(90, 44);
-            this.checkBoxPingjun.Name = "checkBoxPingjun";
-            this.checkBoxPingjun.Size = new System.Drawing.Size(48, 16);
-            this.checkBoxPingjun.TabIndex = 10;
-            this.checkBoxPingjun.Text = "平均";
-            this.checkBoxPingjun.UseVisualStyleBackColor = true;
-            // 
             // checkBoxYingyue
             // 
             this.checkBoxYingyue.AutoSize = true;
-            this.checkBoxYingyue.Location = new System.Drawing.Point(10, 45);
+            this.checkBoxYingyue.Location = new System.Drawing.Point(121, 22);
             this.checkBoxYingyue.Name = "checkBoxYingyue";
             this.checkBoxYingyue.Size = new System.Drawing.Size(48, 16);
             this.checkBoxYingyue.TabIndex = 9;
@@ -252,7 +251,7 @@
             // checkBoxShuxue
             // 
             this.checkBoxShuxue.AutoSize = true;
-            this.checkBoxShuxue.Location = new System.Drawing.Point(90, 22);
+            this.checkBoxShuxue.Location = new System.Drawing.Point(65, 22);
             this.checkBoxShuxue.Name = "checkBoxShuxue";
             this.checkBoxShuxue.Size = new System.Drawing.Size(48, 16);
             this.checkBoxShuxue.TabIndex = 8;
@@ -272,7 +271,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(111, 78);
+            this.label8.Location = new System.Drawing.Point(111, 53);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(17, 12);
             this.label8.TabIndex = 5;
@@ -281,7 +280,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 78);
+            this.label7.Location = new System.Drawing.Point(9, 53);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 12);
             this.label7.TabIndex = 4;
@@ -289,14 +288,14 @@
             // 
             // textBoxFenshuFanwei2
             // 
-            this.textBoxFenshuFanwei2.Location = new System.Drawing.Point(134, 75);
+            this.textBoxFenshuFanwei2.Location = new System.Drawing.Point(134, 50);
             this.textBoxFenshuFanwei2.Name = "textBoxFenshuFanwei2";
             this.textBoxFenshuFanwei2.Size = new System.Drawing.Size(35, 21);
             this.textBoxFenshuFanwei2.TabIndex = 2;
             // 
             // textBoxFenshuFanwei1
             // 
-            this.textBoxFenshuFanwei1.Location = new System.Drawing.Point(70, 75);
+            this.textBoxFenshuFanwei1.Location = new System.Drawing.Point(70, 50);
             this.textBoxFenshuFanwei1.Name = "textBoxFenshuFanwei1";
             this.textBoxFenshuFanwei1.Size = new System.Drawing.Size(35, 21);
             this.textBoxFenshuFanwei1.TabIndex = 1;
@@ -309,7 +308,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(207, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(540, 488);
+            this.dataGridView1.Size = new System.Drawing.Size(540, 498);
             this.dataGridView1.TabIndex = 2;
             // 
             // tabControl4
@@ -319,7 +318,7 @@
             this.tabControl4.Location = new System.Drawing.Point(12, 12);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(193, 488);
+            this.tabControl4.Size = new System.Drawing.Size(193, 469);
             this.tabControl4.TabIndex = 3;
             // 
             // tabPage1
@@ -330,7 +329,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(185, 462);
+            this.tabPage1.Size = new System.Drawing.Size(185, 443);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "查询";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -341,7 +340,6 @@
             this.groupBox5.Controls.Add(this.label15);
             this.groupBox5.Controls.Add(this.buttonFenshu);
             this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.checkBoxPingjun);
             this.groupBox5.Controls.Add(this.textBoxFenshuFanwei1);
             this.groupBox5.Controls.Add(this.checkBoxYingyue);
             this.groupBox5.Controls.Add(this.textBoxFenshuFanwei2);
@@ -350,14 +348,14 @@
             this.groupBox5.Controls.Add(this.checkBoxYuwen);
             this.groupBox5.Location = new System.Drawing.Point(4, 291);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(174, 165);
+            this.groupBox5.Size = new System.Drawing.Size(174, 147);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "按分数";
             // 
             // textBoxFenshuHushu
             // 
-            this.textBoxFenshuHushu.Location = new System.Drawing.Point(69, 105);
+            this.textBoxFenshuHushu.Location = new System.Drawing.Point(69, 80);
             this.textBoxFenshuHushu.Name = "textBoxFenshuHushu";
             this.textBoxFenshuHushu.Size = new System.Drawing.Size(100, 21);
             this.textBoxFenshuHushu.TabIndex = 13;
@@ -365,7 +363,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(10, 108);
+            this.label15.Location = new System.Drawing.Point(10, 83);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(29, 12);
             this.label15.TabIndex = 12;
@@ -378,7 +376,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(185, 462);
+            this.tabPage2.Size = new System.Drawing.Size(185, 443);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "管理";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -598,23 +596,37 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "学号";
             // 
-            // textBoxGerenXinxi
+            // buttonZhuxiao
             // 
-            this.textBoxGerenXinxi.Enabled = false;
-            this.textBoxGerenXinxi.Location = new System.Drawing.Point(65, 55);
-            this.textBoxGerenXinxi.Name = "textBoxGerenXinxi";
-            this.textBoxGerenXinxi.Size = new System.Drawing.Size(100, 21);
-            this.textBoxGerenXinxi.TabIndex = 9;
+            this.buttonZhuxiao.Location = new System.Drawing.Point(16, 487);
+            this.buttonZhuxiao.Name = "buttonZhuxiao";
+            this.buttonZhuxiao.Size = new System.Drawing.Size(67, 23);
+            this.buttonZhuxiao.TabIndex = 4;
+            this.buttonZhuxiao.Text = "注销";
+            this.buttonZhuxiao.UseVisualStyleBackColor = true;
+            this.buttonZhuxiao.Click += new System.EventHandler(this.buttonZhuxiao_Click);
             // 
-            // Form1
+            // buttonTuichu
+            // 
+            this.buttonTuichu.Location = new System.Drawing.Point(119, 487);
+            this.buttonTuichu.Name = "buttonTuichu";
+            this.buttonTuichu.Size = new System.Drawing.Size(75, 23);
+            this.buttonTuichu.TabIndex = 5;
+            this.buttonTuichu.Text = "退出";
+            this.buttonTuichu.UseVisualStyleBackColor = true;
+            this.buttonTuichu.Click += new System.EventHandler(this.buttonTuichu_Click);
+            // 
+            // FormJiaoshi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 512);
+            this.ClientSize = new System.Drawing.Size(759, 525);
+            this.Controls.Add(this.buttonTuichu);
+            this.Controls.Add(this.buttonZhuxiao);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tabControl4);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Name = "Form1";
+            this.Name = "FormJiaoshi";
             this.Text = "学生成绩档案";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -652,7 +664,6 @@
         private System.Windows.Forms.TextBox textBoxGerenXuehao;
         private System.Windows.Forms.Button buttonGeren;
         private System.Windows.Forms.Button buttonFenshu;
-        private System.Windows.Forms.CheckBox checkBoxPingjun;
         private System.Windows.Forms.CheckBox checkBoxYingyue;
         private System.Windows.Forms.CheckBox checkBoxShuxue;
         private System.Windows.Forms.CheckBox checkBoxYuwen;
@@ -688,6 +699,8 @@
         private System.Windows.Forms.TextBox textBoxChengjiHuishu;
         private System.Windows.Forms.TextBox textBoxXinxiBanji;
         private System.Windows.Forms.TextBox textBoxGerenXinxi;
+        private System.Windows.Forms.Button buttonZhuxiao;
+        private System.Windows.Forms.Button buttonTuichu;
     }
 }
 

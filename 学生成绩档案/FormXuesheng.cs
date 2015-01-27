@@ -14,6 +14,13 @@ namespace 学生成绩档案
         public FormXuesheng()
         {
             InitializeComponent();
+
+        }
+
+        private void FormXuesheng_Load(object sender, EventArgs e)
+        {
+            this.label4.Text = ((FormDenglu)this.Owner).passText;
         }
     }
+    
 }

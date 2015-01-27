@@ -313,7 +313,18 @@ namespace 学生成绩档案
 
         private void buttonXinxiShanchu_Click(object sender, EventArgs e)
         {
+        }
 
+        private void buttonZhuxiao_Click(object sender, EventArgs e)
+        {
+            FormDenglu frdl = new FormDenglu();
+            frdl.Show();
+            this.Close();
+        }
+
+        private void buttonTuichu_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }
