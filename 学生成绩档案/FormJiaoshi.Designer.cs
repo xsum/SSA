@@ -81,6 +81,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.buttonZhuxiao = new System.Windows.Forms.Button();
             this.buttonTuichu = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.labelGonghao = new System.Windows.Forms.Label();
+            this.label1Xingming = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -308,14 +312,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(207, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(540, 498);
+            this.dataGridView1.Size = new System.Drawing.Size(540, 547);
             this.dataGridView1.TabIndex = 2;
             // 
             // tabControl4
             // 
             this.tabControl4.Controls.Add(this.tabPage1);
             this.tabControl4.Controls.Add(this.tabPage2);
-            this.tabControl4.Location = new System.Drawing.Point(12, 12);
+            this.tabControl4.Location = new System.Drawing.Point(10, 61);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
             this.tabControl4.Size = new System.Drawing.Size(193, 469);
@@ -598,7 +602,7 @@
             // 
             // buttonZhuxiao
             // 
-            this.buttonZhuxiao.Location = new System.Drawing.Point(16, 487);
+            this.buttonZhuxiao.Location = new System.Drawing.Point(20, 536);
             this.buttonZhuxiao.Name = "buttonZhuxiao";
             this.buttonZhuxiao.Size = new System.Drawing.Size(67, 23);
             this.buttonZhuxiao.TabIndex = 4;
@@ -608,7 +612,7 @@
             // 
             // buttonTuichu
             // 
-            this.buttonTuichu.Location = new System.Drawing.Point(119, 487);
+            this.buttonTuichu.Location = new System.Drawing.Point(110, 536);
             this.buttonTuichu.Name = "buttonTuichu";
             this.buttonTuichu.Size = new System.Drawing.Size(75, 23);
             this.buttonTuichu.TabIndex = 5;
@@ -616,11 +620,51 @@
             this.buttonTuichu.UseVisualStyleBackColor = true;
             this.buttonTuichu.Click += new System.EventHandler(this.buttonTuichu_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "工号";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(26, 35);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(29, 12);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "姓名";
+            // 
+            // labelGonghao
+            // 
+            this.labelGonghao.AutoSize = true;
+            this.labelGonghao.Location = new System.Drawing.Point(108, 12);
+            this.labelGonghao.Name = "labelGonghao";
+            this.labelGonghao.Size = new System.Drawing.Size(17, 12);
+            this.labelGonghao.TabIndex = 8;
+            this.labelGonghao.Text = "空";
+            // 
+            // label1Xingming
+            // 
+            this.label1Xingming.AutoSize = true;
+            this.label1Xingming.Location = new System.Drawing.Point(108, 35);
+            this.label1Xingming.Name = "label1Xingming";
+            this.label1Xingming.Size = new System.Drawing.Size(17, 12);
+            this.label1Xingming.TabIndex = 9;
+            this.label1Xingming.Text = "空";
+            // 
             // FormJiaoshi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 525);
+            this.ClientSize = new System.Drawing.Size(759, 571);
+            this.Controls.Add(this.label1Xingming);
+            this.Controls.Add(this.labelGonghao);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonTuichu);
             this.Controls.Add(this.buttonZhuxiao);
             this.Controls.Add(this.dataGridView1);
@@ -628,6 +672,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "FormJiaoshi";
             this.Text = "学生成绩档案";
+            this.Load += new System.EventHandler(this.FormJiaoshi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -643,6 +688,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -701,6 +747,10 @@
         private System.Windows.Forms.TextBox textBoxGerenXinxi;
         private System.Windows.Forms.Button buttonZhuxiao;
         private System.Windows.Forms.Button buttonTuichu;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label labelGonghao;
+        private System.Windows.Forms.Label label1Xingming;
     }
 }
 

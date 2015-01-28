@@ -17,11 +17,6 @@ namespace 学生成绩档案
             InitializeComponent();
         }
 
-        public string passText
-        {
-            get { return textBoxHaoma.Text; }
-        }
-
         private void radioButtonXuesheng_CheckedChanged(object sender, EventArgs e)
         {
             this.label1.Text = "学号";
@@ -48,9 +43,8 @@ namespace 学生成绩档案
                 SqlDataReader sdr = com1.ExecuteReader();
                 if (sdr.Read())
                 {
-                    FormXuesheng frxs = new FormXuesheng();
-                    frxs.Show();
-                    frxs.Owner = this;
+                    string xuehao = textBoxHaoma.Text;
+                    new FormXuesheng(xuehao).Show();
                     con.Close();
                     this.Visible = false;
                 }
@@ -71,9 +65,8 @@ namespace 学生成绩档案
                 SqlDataReader sdr = com1.ExecuteReader();
                 if (sdr.Read())
                 {
-                    FormJiaoshi frjs = new FormJiaoshi();
-                    frjs.Show();
-                    frjs.Owner = this;
+                    string gonghao = textBoxHaoma.Text;
+                    new FormJiaoshi(gonghao).Show();
                     con.Close();
                     this.Visible = false;
                 }

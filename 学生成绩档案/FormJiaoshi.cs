@@ -12,9 +12,12 @@ namespace 学生成绩档案
 {
     public partial class FormJiaoshi : Form
     {
-        public FormJiaoshi()
+        string gonghao;
+
+        public FormJiaoshi(string gonghao)
         {
             InitializeComponent();
+            this.gonghao = gonghao;
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
             con.Open();
@@ -31,6 +34,11 @@ namespace 学生成绩档案
                 adapter.Fill(ds);
                 this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
             }
+        }
+
+        private void FormJiaoshi_Load(object sender, EventArgs e)
+        {
+            labelGonghao.Text = gonghao;
         }
 
         private void buttonBanji_Click(object sender, EventArgs e)
@@ -326,6 +334,5 @@ namespace 学生成绩档案
         {
             this.Close();
         }
-
     }
 }
