@@ -78,11 +78,9 @@ namespace 学生成绩档案
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonXiugaimima_Click(object sender, EventArgs e)
         {
-            FormXiugaimima frxgmm = new FormXiugaimima();
-            frxgmm.Show();
-            this.Close();
+            new FormXiugaixueshengmima(xuehao).Show(this);
         }
     }
     

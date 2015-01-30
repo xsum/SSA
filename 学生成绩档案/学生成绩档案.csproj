@@ -58,11 +58,11 @@
     <Compile Include="FormJiaoshi.Designer.cs">
       <DependentUpon>FormJiaoshi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormXiugaimima.cs">
+    <Compile Include="FormXiugaixueshengmima.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormXiugaimima.Designer.cs">
-      <DependentUpon>FormXiugaimima.cs</DependentUpon>
+    <Compile Include="FormXiugaixueshengmima.Designer.cs">
+      <DependentUpon>FormXiugaixueshengmima.cs</DependentUpon>
     </Compile>
     <Compile Include="FormXuesheng.cs">
       <SubType>Form</SubType>
@@ -78,8 +78,8 @@
     <EmbeddedResource Include="FormJiaoshi.resx">
       <DependentUpon>FormJiaoshi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormXiugaimima.resx">
-      <DependentUpon>FormXiugaimima.cs</DependentUpon>
+    <EmbeddedResource Include="FormXiugaixueshengmima.resx">
+      <DependentUpon>FormXiugaixueshengmima.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXuesheng.resx">
       <DependentUpon>FormXuesheng.cs</DependentUpon>

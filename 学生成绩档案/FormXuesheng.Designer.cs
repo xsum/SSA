@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonXiugaimima = new System.Windows.Forms.Button();
             this.labelBanji = new System.Windows.Forms.Label();
             this.labelXingming = new System.Windows.Forms.Label();
             this.labelXuehao = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.buttonXiugaimima);
             this.groupBox1.Controls.Add(this.labelBanji);
             this.groupBox1.Controls.Add(this.labelXingming);
             this.groupBox1.Controls.Add(this.labelXuehao);
@@ -71,15 +71,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "个人信息";
             // 
-            // button3
+            // buttonXiugaimima
             // 
-            this.button3.Location = new System.Drawing.Point(103, 50);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "修改密码";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonXiugaimima.Location = new System.Drawing.Point(103, 50);
+            this.buttonXiugaimima.Name = "buttonXiugaimima";
+            this.buttonXiugaimima.Size = new System.Drawing.Size(75, 23);
+            this.buttonXiugaimima.TabIndex = 6;
+            this.buttonXiugaimima.Text = "修改密码";
+            this.buttonXiugaimima.UseVisualStyleBackColor = true;
+            this.buttonXiugaimima.Click += new System.EventHandler(this.buttonXiugaimima_Click);
             // 
             // labelBanji
             // 
@@ -304,6 +304,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonXiugaimima;
     }
 }
