@@ -98,7 +98,7 @@
             this.radioButtonXuesheng.Location = new System.Drawing.Point(107, 120);
             this.radioButtonXuesheng.Name = "radioButtonXuesheng";
             this.radioButtonXuesheng.Size = new System.Drawing.Size(47, 16);
-            this.radioButtonXuesheng.TabIndex = 6;
+            this.radioButtonXuesheng.TabIndex = 2;
             this.radioButtonXuesheng.TabStop = true;
             this.radioButtonXuesheng.Text = "学生";
             this.radioButtonXuesheng.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             this.radioButtonJiaoshi.Location = new System.Drawing.Point(183, 120);
             this.radioButtonJiaoshi.Name = "radioButtonJiaoshi";
             this.radioButtonJiaoshi.Size = new System.Drawing.Size(47, 16);
-            this.radioButtonJiaoshi.TabIndex = 7;
+            this.radioButtonJiaoshi.TabIndex = 3;
             this.radioButtonJiaoshi.TabStop = true;
             this.radioButtonJiaoshi.Text = "教师";
             this.radioButtonJiaoshi.UseVisualStyleBackColor = true;

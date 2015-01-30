@@ -18,27 +18,32 @@ namespace 学生成绩档案
         {
             InitializeComponent();
             this.gonghao = gonghao;
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
-            con.Open();
-            if (con.State == ConnectionState.Open)
-            {
-                string sql = "SELECT  成绩.学号, 学生.姓名, 学生.班级, 课程.课程名称 as 科目, 成绩.回数, 成绩.成绩 "
-                    +"FROM 成绩 "
-                    +"JOIN 学生 "
-                    +"ON 成绩.学号 = 学生.学号 "
-                    +"JOIN 课程 "
-                    +"ON 成绩.课程编号 = 课程.课程编号";
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-                this.dataGridView1.DataSource = ds.Tables[0].DefaultView;
-            }
         }
 
         private void FormJiaoshi_Load(object sender, EventArgs e)
         {
             labelGonghao.Text = gonghao;
+
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "server=MX-WIN8\\SQLEXPRESS;database=学生成绩档案;Integrated Security=true";
+            string sql = "SELECT 姓名 FROM 教师 WHERE 工号 = '" + labelGonghao.Text + "'";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            this.labelXingming.Text = ds.Tables[0].Rows[0][0].ToString();
+
+            string sql2 = "SELECT  成绩.学号, 学生.姓名, 学生.班级, 课程.课程名称 as 科目, 成绩.回数, 成绩.成绩 "
+                    + "FROM 成绩 "
+                    + "JOIN 学生 "
+                    + "ON 成绩.学号 = 学生.学号 "
+                    + "JOIN 课程 "
+                    + "ON 成绩.课程编号 = 课程.课程编号";
+            SqlDataAdapter adapter2 = new SqlDataAdapter(sql2, con);
+            DataSet ds2 = new DataSet();
+            adapter2.Fill(ds2);
+            this.dataGridView1.DataSource = ds2.Tables[0].DefaultView;
+
+            this.toolStripStatusLabel1.Text = "欢迎使用";
         }
 
         private void buttonBanji_Click(object sender, EventArgs e)
